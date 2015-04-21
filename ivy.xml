@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+
+<ivy-module version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
+
+    <info organisation="r9" module="selenium">
+    </info>
+
+    <configurations>
+        <conf name="compile" description="code needed to compile"/>
+        <conf name="runtime" description="code needed at runtime"/>
+        <conf name="compiletest" description="code needed to compile tests"/>
+        <conf name="runtimetest" description="code needed at runtime for tests"/>
+        <conf name="dist" description="non-code files needed at runtime"/>
+        <conf name="dist-ui" description="non-code files needed at runtime (UI)"/>
+        <conf name="sources" description="source jars"/>
+    </configurations>
+
+    <dependencies>
+        <!-- Project dependencies -->
+
+        <!-- Third-party dependencies -->
+        <dependency conf="runtime->default" name="junit" org="junit" rev="4.10" transitive="false"/>
+        <dependency conf="runtime->default" name="cpsuite" org="junit-extensions" rev="1.2.5" transitive="true"/>
+        <dependency conf="runtime->default" name="testng" org="org.testng" rev="6.8" transitive="true"/>
+
+        <dependency conf="runtime->default" name="selenium-firefox-driver" org="org.seleniumhq.selenium" rev="2.44.0" transitive="true"/>
+        <dependency conf="runtime->default" name="selenium-chrome-driver" org="org.seleniumhq.selenium" rev="2.44.0" transitive="true"/>
+        <dependency conf="runtime->default" name="selenium-ie-driver" org="org.seleniumhq.selenium" rev="2.44.0" transitive="true"/>
+        <dependency conf="runtime->default" name="selenium-support" org="org.seleniumhq.selenium" rev="2.44.0" transitive="true"/>
+        <dependency conf="runtime->default" name="selenium-java" org="org.seleniumhq.selenium" rev="2.44.0" transitive="false"/>
+
+        <dependency conf="runtime->default" name="java-client" org="io.appium" rev="2.0.0"  transitive="false"/>
+
+        <dependency conf="runtime->default" name="ant" org="org.apache.ant" rev="1.8.2" transitive="true"/>
+        <dependency conf="runtime->default" name="httpcore" org="org.apache.httpcomponents" rev="4.3.2" transitive="false"/>
+
+        <dependency conf="runtime->default" name="commons-beanutils-core" org="commons-beanutils" rev="1.8.0"/>
+        <dependency conf="runtime->default" name="commons-beanutils" org="commons-beanutils" rev="1.7.0"/>
+        <dependency conf="runtime->default" name="commons-codec" org="commons-codec" rev="1.9" transitive="true"/>
+        <dependency conf="runtime->default" name="commons-configuration" org="commons-configuration" rev="1.6" transitive="true"/>
+        <dependency conf="runtime->default" name="commons-digester" org="commons-digester" rev="1.8"/>
+        <dependency conf="runtime->default" name="commons-io" org="commons-io" rev="2.2" transitive="true"/>
+        <dependency conf="runtime->default" name="commons-lang" org="commons-lang" rev="2.6" transitive="true"/>
+
+        <dependency conf="runtime->default" name="core" org="com.google.gdata" rev="1.47.1" transitive="false"/>
+
+        <dependency conf="runtime->default" name="jackson-core-asl" org="org.codehaus.jackson" rev="1.9.13" transitive="false"/>
+        <dependency conf="runtime->default" name="jackson-mapper-asl" org="org.codehaus.jackson" rev="1.9.13" transitive="false"/>
+        <dependency conf="runtime->default" name="json" org="org.json" rev="20080701" transitive="false"/>
+
+        <dependency conf="runtime->default" name="joda-time" org="joda-time" rev="2.1-tzdata2012f" transitive="true"/>
+
+        <dependency conf="runtime->default" name="spring-beans" org="org.springframework" rev="4.1.1.RELEASE" transitive="true"/>
+        <dependency conf="runtime->default" name="spring-context" org="org.springframework" rev="4.1.1.RELEASE" transitive="true"/>
+        <dependency conf="runtime->default" name="spring-core" org="org.springframework" rev="4.1.1.RELEASE" transitive="true"/>
+
+        <dependency conf="runtime->default" name="hamcrest-library" org="org.hamcrest" rev="1.3" transitive="false"/>
+
+        <dependency conf="runtime->default" name="JUnitParams" org="pl.pragmatists" rev="1.0.2"/>
+    </dependencies>
+
+</ivy-module>
