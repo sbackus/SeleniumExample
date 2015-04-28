@@ -1,40 +1,25 @@
 package selenium.geek.girl;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.junit.*;
+import static org.junit.Assert.assertTrue;
+
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
-import static org.junit.Assert.*;
+public class TestClass extends TestBase{
 
-public class TestClass {
-
-    public static WebDriverWait wait;
-
-    public static WebDriver driver;
-
-    @Before
-    public void setUp() {
-
-        driver = new FirefoxDriver();
-
-    }
-
+    /**
+     * This test will check the existance of the Wherebox on Kayak/hotels front door
+     */
     @Test
-    public void testMethod() throws InterruptedException{
-        driver.get("http://www.google.com");
-        
+    public void testMethod() {
+        driver.get("http://www.kayak.com/hotels");
+
         WebElement element;
 
-        element = driver.findElement(By.xpath("//input[@id='lst-ib']"));
-        assertTrue(element.isDisplayed());
-    }
-
-    @AfterClass
-    public static void tearDown() {
-        driver.quit();
+        element = driver.findElement(By.xpath("//input[@id='wherebox']"));
+        assertTrue("The wherebox should be shown in the first page.", 
+                   element.isDisplayed());
     }
 
 }
