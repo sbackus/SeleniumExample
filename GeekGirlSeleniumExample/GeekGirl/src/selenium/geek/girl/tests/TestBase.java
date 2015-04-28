@@ -1,4 +1,4 @@
-package selenium.geek.girl;
+package selenium.geek.girl.tests;
 
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -24,6 +24,7 @@ public class TestBase {
     @Before
     public void setUp() {
         driver = new FirefoxDriver();
+        driver.get("http://www.kayak.com");
     }
 
     /**
