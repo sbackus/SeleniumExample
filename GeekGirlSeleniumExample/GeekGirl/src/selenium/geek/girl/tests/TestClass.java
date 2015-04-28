@@ -6,9 +6,12 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import com.thoughtworks.selenium.webdriven.commands.IsVisible;
-import com.thoughtworks.selenium.webdriven.commands.Open;
 
+/**
+ * This class automates the hotel front door page for KAYAK
+ * @author elica
+ *
+ */
 public class TestClass extends TestBase{
 
     /**
